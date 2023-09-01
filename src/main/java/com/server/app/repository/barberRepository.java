@@ -18,5 +18,8 @@ public interface barberRepository extends MongoRepository<barber, String> {
 
     boolean existsByUsername(String username);
 
+    barber findByEmailOrUsername(String email, String username);
+
     public long count();
+
 }
